@@ -1,0 +1,54 @@
+{
+  "sources": [
+    {
+      "title": "BBC News",
+      "feedId": "http://feeds.bbci.co.uk/news/rss.xml",
+      "summary": ""
+    },
+    {
+      "title": "CNN",
+      "feedId": "http://rss.cnn.com/rss/edition.rss",
+      "summary": ""
+    },
+    {
+      "title": "The New York Times",
+      "feedId": "http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+      "summary": ""
+    },
+    {
+      "title": "The Guardian",
+      "feedId": "https://www.theguardian.com/uk/rss",
+      "summary": ""
+    },
+    {
+      "title": "Reuters",
+      "feedId": "http://feeds.reuters.com/reuters/topNews",
+      "summary": ""
+    },
+    {
+      "title": "The Washington Post",
+      "feedId": "http://feeds.washingtonpost.com/rss/world",
+      "summary": ""
+    },
+    {
+      "title": "NPR",
+      "feedId": "http://www.npr.org/rss/rss.php?id=1001",
+      "summary": ""
+    },
+    {
+      "title": "Al Jazeera English",
+      "feedId": "http://www.aljazeera.com/xml/rss/all.xml",
+      "summary": ""
+    },
+    {
+      "title": "Hacker News",
+      "feedId": "https://news.ycombinator.com/rss",
+      "summary": ""
+    },
+    {
+      "title": "TechCrunch",
+      "feedId": "http://feeds.feedburner.com/TechCrunch/",
+      "summary": ""
+    }
+  ]
+}
