@@ -12,6 +12,10 @@ class Post:
 
     def truncate_description(self, max_words=150) -> None:
         """Truncate summary to a maximum number of words"""
+        if not self.description:
+            self.description = "No description available"
+            return
+
         words = self.description.split()
         if len(words) > max_words:
             self.description = " ".join(words[:max_words]) + "..."
@@ -40,16 +44,20 @@ class Feed:
 
     def get_latest_posts(self, num_posts=10) -> List[Post]:
         """Retrieve the latest posts from the feed"""
-        feed = feedparser.parse(self.feed_link)
-        posts = []
+        try:
+            feed = feedparser.parse(self.feed_link)
+            posts = []
 
-        for entry in feed.entries[:num_posts]:
-            post = Post(
-                title=entry.title, link=entry.link, description=entry.description
-            )
-            posts.append(post)
+            for entry in feed.entries[:num_posts]:
+                post = Post(
+                    title=entry.title, link=entry.link, description=entry.description
+                )
+                posts.append(post)
 
-        return posts
+            return posts
+        except Exception as e:
+            print(f"Error fetching posts for feed {self.feed_link}: {e}")
+            return []
 
     def generate_summary_from_website(self) -> None:
         """Generate a summary from the website's content"""

@@ -56,10 +56,6 @@ class FeedDisplay:
                 bottom_pane.addstr(
                     3, 1, f"Summary: {latest_article.description[:width-3]}"
                 )  # Adjust for border
-            else:
-                bottom_pane.addstr(
-                        1, 1, "No articles found"
-                        )
 
             # Get user input
             key = top_pane.getch()

@@ -4,12 +4,10 @@
 # summaries and provide an overview of what all my rss feeds are saying
 
 from curses import wrapper
-from typing import List
-from src.modules.rss import Feed, FeedParser
+from src.modules.rss import FeedParser
 from src.modules.ui import FeedDisplay
 
 import argparse
-import curses
 
 
 def parse_args():
