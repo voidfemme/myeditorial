@@ -2,53 +2,63 @@
   "sources": [
     {
       "title": "BBC News",
+      "website_link": "https://bbc.co.uk",
       "feedId": "http://feeds.bbci.co.uk/news/rss.xml",
-      "summary": ""
+      "description": ""
     },
     {
       "title": "CNN",
+      "website_link": "https://cnn.com",
       "feedId": "http://rss.cnn.com/rss/edition.rss",
-      "summary": ""
+      "description": ""
     },
     {
       "title": "The New York Times",
+      "website_link": "https://nytimes.com",
       "feedId": "http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
-      "summary": ""
+      "description": ""
     },
     {
       "title": "The Guardian",
+      "website_link": "https://www.theguardian.com",
       "feedId": "https://www.theguardian.com/uk/rss",
-      "summary": ""
+      "description": ""
     },
     {
       "title": "Reuters",
+      "website_link": "https://reuters.com",
       "feedId": "http://feeds.reuters.com/reuters/topNews",
-      "summary": ""
+      "description": ""
     },
     {
       "title": "The Washington Post",
+      "website_link": "https://washingtonpost.com",
       "feedId": "http://feeds.washingtonpost.com/rss/world",
-      "summary": ""
+      "description": ""
     },
     {
       "title": "NPR",
+      "website_link": "https://www.npr.org",
       "feedId": "http://www.npr.org/rss/rss.php?id=1001",
-      "summary": ""
+      "description": ""
     },
     {
       "title": "Al Jazeera English",
+      "website_link": "https://www.aljazeera.com",
       "feedId": "http://www.aljazeera.com/xml/rss/all.xml",
-      "summary": ""
+      "description": ""
     },
     {
       "title": "Hacker News",
+      "website_link": "https://news.ycombinator.com/",
       "feedId": "https://news.ycombinator.com/rss",
-      "summary": ""
+      "description": ""
     },
     {
       "title": "TechCrunch",
+      "website_link": "https://techcrunch.com/",
       "feedId": "http://feeds.feedburner.com/TechCrunch/",
-      "summary": ""
+      "description": ""
     }
   ]
 }

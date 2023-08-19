@@ -22,7 +22,9 @@ def main():
 
     if args.find:
         # Discover RSS feeds based on keywords
-        feed_objects = FeedParser.create_feeds_from_search(args.find)
+        feed_objects = FeedParser.discover_feeds(args.find)
+    else:
+        feed_objects = FeedParser.load_feeds_from_file("data/sources.json")
 
     wrapper(FeedDisplay.display_feeds, feed_objects)
 

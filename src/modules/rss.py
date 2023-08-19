@@ -1,5 +1,6 @@
-from bs4 import BeautifulSoup
-from typing import List
+from bs4 import BeautifulSoup, Tag, NavigableString
+from typing import List, Optional, Union
+import json
 import requests
 import feedparser
 
@@ -73,12 +74,21 @@ class Feed:
 
 class FeedParser:
     @staticmethod
-    def extract_rss_feed_from_website(website_url: str) -> str:
+    def extract_rss_feed_from_website(website_url: str) -> list[str]:
         """Discover the RSS feed URL from a website's main page."""
         response = requests.get(website_url)
         soup = BeautifulSoup(response.content, "html.parser")
-        link = soup.find("link", {"type": "application/rss+xml"})
-        return link["href"] if link else ""
+        link: Optional[Union[Tag, NavigableString]] = soup.find(
+            "link", {"type": "application/rss+xml"}
+        )
+        if isinstance(link, Tag):
+            href_value = link["href"]
+            if isinstance(href_value, list):
+                return href_value
+            else:
+                return [href_value]
+        else:
+            return []
 
     @staticmethod
     def search_rss_feeds(keywords):
@@ -89,7 +99,7 @@ class FeedParser:
         return feeds
 
     @classmethod
-    def create_feeds_from_search(cls, query: str) -> List[Feed]:
+    def discover_feeds(cls, query: str) -> List[Feed]:
         feeds_data = cls.search_rss_feeds(query)
         feed_objects = []
         for feed_data in feeds_data:
@@ -102,5 +112,24 @@ class FeedParser:
             if not feed.description:
                 feed.generate_summary_from_website()
             feed_objects.append(feed)
+
+        return feed_objects
+
+    @classmethod
+    def load_feeds_from_file(cls, file_path: str) -> List[Feed]:
+        """Load feeds from a specified source file"""
+        with open(file_path, "r") as file:
+            data = json.load(file)
+            sources = data.get("sources", [])
+
+            feed_objects = []
+            for source in sources:
+                feed = Feed(
+                    title=source.get("title"),
+                    website_link=source.get("website_link", ""),
+                    feed_link=source.get("feedId"),
+                    description=source.get("description", ""),
+                )
+                feed_objects.append(feed)
 
         return feed_objects
