@@ -1,7 +1,9 @@
 import curses
+import textwrap
 from src.modules.rss import Feed
 from typing import TYPE_CHECKING
 import logging
+import re
 
 # Initialize logging
 logging.basicConfig(filename="ui.log", level=logging.DEBUG)
@@ -124,9 +126,9 @@ class FeedDisplay:
                 top_pane.refresh()
 
                 middle_pane.clear()
-                middle_pane.add_text(
-                    1, 1, current_feed.description, curses.color_pair(1)
-                )
+
+                FeedDisplay.display_description(current_feed, middle_pane)
+
                 middle_pane.refresh()
 
                 key = input_handler.get_input()
@@ -173,3 +175,15 @@ class FeedDisplay:
     def end_display(stdscr: "_CursesWindow") -> None:
         stdscr.keypad(False)
         curses.endwin()
+
+    @staticmethod
+    def display_description(current_feed, pane) -> None:
+        description = current_feed.description.strip()
+        paragraphs = re.split(r" {2,}", description)
+        current_y = 1
+        for paragraph in paragraphs:
+            wrapped_paragraph = textwrap.wrap(paragraph, pane.width - 2)
+            for line in wrapped_paragraph:
+                pane.add_text(current_y, 1, line, curses.color_pair(1))
+                current_y += 1
+            current_y += 1  # Add an extra line between paragraphs
