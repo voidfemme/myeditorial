@@ -3,14 +3,14 @@
 # lets you open up the original story to learn more. id use the chatgpt api to generate
 # summaries and provide an overview of what all my rss feeds are saying
 
-from curses import wrapper
 from src.modules.rss import FeedParser
 from src.modules.ui import FeedDisplay
 
 import argparse
+from argparse import Namespace
 
 
-def parse_args():
+def parse_args() -> Namespace:
     parser = argparse.ArgumentParser(description="RSS Reader with Feed Discovery")
     parser.add_argument("--find", type=str, help="Discover RSS feeds based on keywords")
     return parser.parse_args()
@@ -26,7 +26,12 @@ def main():
     else:
         feed_objects = FeedParser.load_feeds_from_file("data/sources.json")
 
-    wrapper(FeedDisplay.display_feeds, feed_objects)
+    # Initialize the display and create panes
+    stdscr = FeedDisplay.init_display()
+    top_pane, middle_pane, bottom_pane = FeedDisplay.create_panes(stdscr)
+
+    # Display the feeds using the UI
+    FeedDisplay.display_feeds(feed_objects, stdscr, top_pane, middle_pane, bottom_pane)
 
 
 if __name__ == "__main__":
