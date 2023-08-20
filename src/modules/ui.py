@@ -1,6 +1,10 @@
 import curses
 from src.modules.rss import Feed
 from typing import TYPE_CHECKING
+import logging
+
+# Initialize logging
+logging.basicConfig(filename="ui.log", level=logging.DEBUG)
 
 if TYPE_CHECKING:
     from curses import _CursesWindow
@@ -37,7 +41,9 @@ class InputHandler:
         self.stdscr = stdscr
 
     def get_input(self) -> int:
-        return self.stdscr.getch()
+        key = self.stdscr.getch()
+        logging.debug(f"Key pressed: {key}")
+        return key
 
     def is_quit(self, key) -> bool:
         return key == ord("q")
@@ -55,16 +61,19 @@ class FeedManager:
         self.selected_feed_index = 1
 
     def get_current_feed(self) -> Feed:
+        logging.debug(f"Current feed index: {self.selected_feed_index}")
         return self.feeds[self.selected_feed_index]
 
     def get_next_feed(self) -> Feed:
         if self.selected_feed_index < len(self.feeds) - 1:
             self.selected_feed_index += 1
+            logging.debug(f"Incremented feed index to: {self.selected_feed_index}")
         return self.get_current_feed()
 
     def get_previous_feed(self) -> Feed:
         if self.selected_feed_index > 0:
             self.selected_feed_index -= 1
+            logging.debug(f"Decremented feed index to: {self.selected_feed_index}")
         return self.get_current_feed()
 
 
@@ -74,6 +83,8 @@ class FeedDisplay:
     @staticmethod
     def init_display() -> "_CursesWindow":
         stdscr = curses.initscr()
+        stdscr.keypad(True)
+        curses.curs_set(0)
         curses.start_color()
         curses.init_pair(1, curses.COLOR_WHITE, curses.COLOR_BLACK)
         stdscr.bkgd(" ", curses.color_pair(1))
@@ -120,8 +131,10 @@ class FeedDisplay:
 
                 key = input_handler.get_input()
                 if input_handler.is_up(key):
+                    logging.debug("Up arrow key detected.")
                     feed_manager.get_previous_feed()
                 elif input_handler.is_down(key):
+                    logging.debug("Down arrow key detected")
                     feed_manager.get_next_feed()
                 elif key == curses.KEY_PPAGE:
                     FeedDisplay.scroll_debug_messages("up", bottom_pane)
@@ -134,6 +147,7 @@ class FeedDisplay:
                 FeedDisplay.display_debug_message(
                     "Window size error. Please resize.", bottom_pane
                 )
+                logging.error("Window size error. Please resize the terminal.")
 
     @staticmethod
     def display_debug_message(message: str, bottom_pane: Pane) -> None:
@@ -154,3 +168,8 @@ class FeedDisplay:
         for idx, msg in enumerate(FeedDisplay.debug_messages[start_idx:]):
             bottom_pane.add_text(idx + 1, 1, msg, curses.color_pair(1))
         bottom_pane.refresh()
+
+    @staticmethod
+    def end_display(stdscr: "_CursesWindow") -> None:
+        stdscr.keypad(False)
+        curses.endwin()

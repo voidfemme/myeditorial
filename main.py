@@ -32,6 +32,7 @@ def main():
 
     # Display the feeds using the UI
     FeedDisplay.display_feeds(feed_objects, stdscr, top_pane, middle_pane, bottom_pane)
+    FeedDisplay.end_display(stdscr)
 
 
 if __name__ == "__main__":

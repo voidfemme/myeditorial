@@ -11,6 +11,9 @@ class Post:
         self.link = link
         self.description = description
 
+    def __str__(self) -> str:
+        return f"{self.title}, {self.link}, {self.description}"
+
     def truncate_description(self, max_words=150) -> None:
         """Truncate summary to a maximum number of words"""
         if not self.description:
@@ -40,8 +43,15 @@ class Feed:
         self.title = title
         self.website_link = website_link
         self.feed_link = feed_link
-        self.description = description
+        if description == "":
+            self.generate_summary_from_website()
+        else:
+            self.description = description
         self.posts = self.get_latest_posts()
+
+    def __str__(self) -> str:
+        return f"title: {self.title}, website_link: {self.website_link}, \
+        feed_link: {self.feed_link}, description: {self.description}, {len(self.posts)} posts"
 
     def get_latest_posts(self, num_posts=10) -> List[Post]:
         """Retrieve the latest posts from the feed"""
