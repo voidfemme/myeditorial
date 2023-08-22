@@ -1,6 +1,7 @@
 import curses
 import textwrap
-from src.modules.rss import Feed
+
+from src.modules.rss import Feed, Post
 from typing import TYPE_CHECKING
 import logging
 import re
@@ -69,14 +70,38 @@ class FeedManager:
     def get_next_feed(self) -> Feed:
         if self.selected_feed_index < len(self.feeds) - 1:
             self.selected_feed_index += 1
-            logging.debug(f"Incremented feed index to: {self.selected_feed_index}")
         return self.get_current_feed()
 
     def get_previous_feed(self) -> Feed:
         if self.selected_feed_index > 0:
             self.selected_feed_index -= 1
-            logging.debug(f"Decremented feed index to: {self.selected_feed_index}")
         return self.get_current_feed()
+
+    def get_selected_feed_posts(self):
+        selected_feed = self.get_current_feed()
+        return selected_feed.posts
+
+
+class PostManager:
+    def __init__(self, posts: list[Post]) -> None:
+        self.posts = posts
+        self.selected_post_index = 0
+
+    def get_current_post(self) -> Post:
+        return self.posts[self.selected_post_index]
+
+    def get_next_post(self) -> Post:
+        if self.selected_post_index < len(self.posts) - 1:
+            self.selected_post_index += 1
+        return self.get_current_post()
+
+    def get_previous_post(self) -> Post:
+        if self.selected_post_index > 0:
+            self.selected_post_index -= 1
+        return self.get_current_post()
+
+    def reset_selection(self):
+        self.selected_post_index = 0
 
 
 class PaneManager:
@@ -145,15 +170,9 @@ class FeedView:
 
                 key = input_handler.get_input()
                 if input_handler.is_up(key):
-                    logging.debug("Up arrow key detected.")
                     feed_manager.get_previous_feed()
                 elif input_handler.is_down(key):
-                    logging.debug("Down arrow key detected")
                     feed_manager.get_next_feed()
-                elif key == curses.KEY_PPAGE:
-                    DebugView.scroll_debug_messages("up", bottom_pane)
-                elif key == curses.KEY_NPAGE:
-                    DebugView.scroll_debug_messages("down", bottom_pane)
                 elif input_handler.is_quit(key):
                     break
 
@@ -174,6 +193,40 @@ class FeedView:
                 pane.add_text(current_y, 1, line, curses.color_pair(1))
                 current_y += 1
             current_y += 1  # Add an extra line between paragraphs
+
+
+class PostView:
+    debug_messages = []
+
+    @classmethod
+    def display_posts(
+        cls, pane: Pane, posts: list[Post], selected_post_index: int
+    ) -> None:
+        pane.clear()
+        pane.add_text(1, 1, "Posts:", curses.color_pair(1))
+        for idx, post in enumerate(posts):
+            if idx == selected_post_index:
+                pane.add_text(idx + 2, 1, f"> {post.title}", curses.color_pair(1))
+            else:
+                pane.add_text(idx + 2, 1, post.title, curses.color_pair(1))
+        pane.refresh()
+
+    @classmethod
+    def display_post_content(cls, pane, post) -> None:
+        pane.clear()
+        pane.add_text(1, 1, post.content, curses.color_pair(1))
+        pane.refresh()
+
+    @classmethod
+    def handle_navigation(cls, key, post_manager) -> None | str:
+        if key == curses.KEY_UP:
+            post_manager.get_previous_post()
+        elif key == curses.KEY_DOWN:
+            post_manager.get_next_post()
+        elif key == curses.KEY_BACKSPACE:
+            post_manager.reset_selection()
+            return "feeds"  # Indicate that we want to switch back to feeds view
+        return None  # No state change
 
 
 class DebugView:

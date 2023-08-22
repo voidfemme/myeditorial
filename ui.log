@@ -58329,3 +58329,465 @@ DEBUG:root:Key pressed: 10
 DEBUG:root:Current feed index: 0
 DEBUG:root:Key pressed: 113
 DEBUG:root:Key pressed: 113
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbc.co.uk:443
+DEBUG:urllib3.connectionpool:https://bbc.co.uk:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.bbc.co.uk:443
+DEBUG:urllib3.connectionpool:https://www.bbc.co.uk:443 "GET / HTTP/1.1" 200 65251
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cnn.com:443
+DEBUG:urllib3.connectionpool:https://cnn.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.cnn.com:443
+DEBUG:urllib3.connectionpool:https://www.cnn.com:443 "GET / HTTP/1.1" 200 713806
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): nytimes.com:443
+DEBUG:urllib3.connectionpool:https://nytimes.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.nytimes.com:443
+DEBUG:urllib3.connectionpool:https://www.nytimes.com:443 "GET / HTTP/1.1" 200 239524
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.theguardian.com:443
+DEBUG:urllib3.connectionpool:https://www.theguardian.com:443 "GET / HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Resetting dropped connection: www.theguardian.com
+DEBUG:urllib3.connectionpool:https://www.theguardian.com:443 "GET /us HTTP/1.1" 200 114614
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): reuters.com:443
+DEBUG:urllib3.connectionpool:https://reuters.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.reuters.com:443
+DEBUG:urllib3.connectionpool:https://www.reuters.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:charset_normalizer:Encoding detection: utf_8 is most likely the one.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): washingtonpost.com:443
+DEBUG:urllib3.connectionpool:https://washingtonpost.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.washingtonpost.com:443
+DEBUG:urllib3.connectionpool:https://www.washingtonpost.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.npr.org:443
+DEBUG:urllib3.connectionpool:https://www.npr.org:443 "GET / HTTP/1.1" 200 30765
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.aljazeera.com:443
+DEBUG:urllib3.connectionpool:https://www.aljazeera.com:443 "GET / HTTP/1.1" 200 68151
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): news.ycombinator.com:443
+DEBUG:urllib3.connectionpool:https://news.ycombinator.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:charset_normalizer:Encoding detection: utf_8 is most likely the one.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): techcrunch.com:443
+DEBUG:urllib3.connectionpool:https://techcrunch.com:443 "GET / HTTP/1.1" 200 427774
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 258
+DEBUG:root:Down arrow key detected
+DEBUG:root:Incremented feed index to: 2
+DEBUG:root:Current feed index: 2
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 258
+DEBUG:root:Down arrow key detected
+DEBUG:root:Incremented feed index to: 3
+DEBUG:root:Current feed index: 3
+DEBUG:root:Current feed index: 3
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 3
+DEBUG:root:Key pressed: 258
+DEBUG:root:Down arrow key detected
+DEBUG:root:Incremented feed index to: 4
+DEBUG:root:Current feed index: 4
+DEBUG:root:Current feed index: 4
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 4
+DEBUG:root:Key pressed: 258
+DEBUG:root:Down arrow key detected
+DEBUG:root:Incremented feed index to: 5
+DEBUG:root:Current feed index: 5
+DEBUG:root:Current feed index: 5
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 5
+DEBUG:root:Key pressed: 258
+DEBUG:root:Down arrow key detected
+DEBUG:root:Incremented feed index to: 6
+DEBUG:root:Current feed index: 6
+DEBUG:root:Current feed index: 6
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 6
+DEBUG:root:Key pressed: 258
+DEBUG:root:Down arrow key detected
+DEBUG:root:Incremented feed index to: 7
+DEBUG:root:Current feed index: 7
+DEBUG:root:Current feed index: 7
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 7
+DEBUG:root:Key pressed: 258
+DEBUG:root:Down arrow key detected
+DEBUG:root:Incremented feed index to: 8
+DEBUG:root:Current feed index: 8
+DEBUG:root:Current feed index: 8
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 8
+DEBUG:root:Key pressed: 258
+DEBUG:root:Down arrow key detected
+DEBUG:root:Incremented feed index to: 9
+DEBUG:root:Current feed index: 9
+DEBUG:root:Current feed index: 9
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 9
+DEBUG:root:Key pressed: 259
+DEBUG:root:Up arrow key detected.
+DEBUG:root:Decremented feed index to: 8
+DEBUG:root:Current feed index: 8
+DEBUG:root:Current feed index: 8
+DEBUG:root:Key pressed: 259
+DEBUG:root:Up arrow key detected.
+DEBUG:root:Decremented feed index to: 7
+DEBUG:root:Current feed index: 7
+DEBUG:root:Current feed index: 7
+DEBUG:root:Key pressed: 259
+DEBUG:root:Up arrow key detected.
+DEBUG:root:Decremented feed index to: 6
+DEBUG:root:Current feed index: 6
+DEBUG:root:Current feed index: 6
+DEBUG:root:Key pressed: 259
+DEBUG:root:Up arrow key detected.
+DEBUG:root:Decremented feed index to: 5
+DEBUG:root:Current feed index: 5
+DEBUG:root:Current feed index: 5
+DEBUG:root:Key pressed: 259
+DEBUG:root:Up arrow key detected.
+DEBUG:root:Decremented feed index to: 4
+DEBUG:root:Current feed index: 4
+DEBUG:root:Current feed index: 4
+DEBUG:root:Key pressed: 259
+DEBUG:root:Up arrow key detected.
+DEBUG:root:Decremented feed index to: 3
+DEBUG:root:Current feed index: 3
+DEBUG:root:Current feed index: 3
+DEBUG:root:Key pressed: 259
+DEBUG:root:Up arrow key detected.
+DEBUG:root:Decremented feed index to: 2
+DEBUG:root:Current feed index: 2
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 259
+DEBUG:root:Up arrow key detected.
+DEBUG:root:Decremented feed index to: 1
+DEBUG:root:Current feed index: 1
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 259
+DEBUG:root:Up arrow key detected.
+DEBUG:root:Decremented feed index to: 0
+DEBUG:root:Current feed index: 0
+DEBUG:root:Current feed index: 0
+DEBUG:root:Key pressed: 259
+DEBUG:root:Up arrow key detected.
+DEBUG:root:Current feed index: 0
+DEBUG:root:Current feed index: 0
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 0
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 0
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 0
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 0
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 0
+DEBUG:root:Key pressed: 113
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 113
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbc.co.uk:443
+DEBUG:urllib3.connectionpool:https://bbc.co.uk:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.bbc.co.uk:443
+DEBUG:urllib3.connectionpool:https://www.bbc.co.uk:443 "GET / HTTP/1.1" 200 65453
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cnn.com:443
+DEBUG:urllib3.connectionpool:https://cnn.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.cnn.com:443
+DEBUG:urllib3.connectionpool:https://www.cnn.com:443 "GET / HTTP/1.1" 200 713539
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): nytimes.com:443
+DEBUG:urllib3.connectionpool:https://nytimes.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.nytimes.com:443
+DEBUG:urllib3.connectionpool:https://www.nytimes.com:443 "GET / HTTP/1.1" 200 239932
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.theguardian.com:443
+DEBUG:urllib3.connectionpool:https://www.theguardian.com:443 "GET / HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Resetting dropped connection: www.theguardian.com
+DEBUG:urllib3.connectionpool:https://www.theguardian.com:443 "GET /us HTTP/1.1" 200 114354
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): reuters.com:443
+DEBUG:urllib3.connectionpool:https://reuters.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.reuters.com:443
+DEBUG:urllib3.connectionpool:https://www.reuters.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:charset_normalizer:Encoding detection: utf_8 is most likely the one.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): washingtonpost.com:443
+DEBUG:urllib3.connectionpool:https://washingtonpost.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.washingtonpost.com:443
+DEBUG:urllib3.connectionpool:https://www.washingtonpost.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.npr.org:443
+DEBUG:urllib3.connectionpool:https://www.npr.org:443 "GET / HTTP/1.1" 200 29816
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.aljazeera.com:443
+DEBUG:urllib3.connectionpool:https://www.aljazeera.com:443 "GET / HTTP/1.1" 200 67034
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): news.ycombinator.com:443
+DEBUG:urllib3.connectionpool:https://news.ycombinator.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:charset_normalizer:Encoding detection: utf_8 is most likely the one.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): techcrunch.com:443
+DEBUG:urllib3.connectionpool:https://techcrunch.com:443 "GET / HTTP/1.1" 200 428186
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 2
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 3
+DEBUG:root:Current feed index: 3
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 3
+DEBUG:root:Key pressed: 259
+DEBUG:root:Current feed index: 2
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 259
+DEBUG:root:Current feed index: 1
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 259
+DEBUG:root:Current feed index: 0
+DEBUG:root:Current feed index: 0
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 0
+DEBUG:root:Key pressed: 113
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 113
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbc.co.uk:443
+DEBUG:urllib3.connectionpool:https://bbc.co.uk:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.bbc.co.uk:443
+DEBUG:urllib3.connectionpool:https://www.bbc.co.uk:443 "GET / HTTP/1.1" 200 65240
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cnn.com:443
+DEBUG:urllib3.connectionpool:https://cnn.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.cnn.com:443
+DEBUG:urllib3.connectionpool:https://www.cnn.com:443 "GET / HTTP/1.1" 200 713432
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): nytimes.com:443
+DEBUG:urllib3.connectionpool:https://nytimes.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.nytimes.com:443
+DEBUG:urllib3.connectionpool:https://www.nytimes.com:443 "GET / HTTP/1.1" 200 239995
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.theguardian.com:443
+DEBUG:urllib3.connectionpool:https://www.theguardian.com:443 "GET / HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Resetting dropped connection: www.theguardian.com
+DEBUG:urllib3.connectionpool:https://www.theguardian.com:443 "GET /us HTTP/1.1" 200 114435
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): reuters.com:443
+DEBUG:urllib3.connectionpool:https://reuters.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.reuters.com:443
+DEBUG:urllib3.connectionpool:https://www.reuters.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:charset_normalizer:Encoding detection: utf_8 is most likely the one.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): washingtonpost.com:443
+DEBUG:urllib3.connectionpool:https://washingtonpost.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.washingtonpost.com:443
+DEBUG:urllib3.connectionpool:https://www.washingtonpost.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.npr.org:443
+DEBUG:urllib3.connectionpool:https://www.npr.org:443 "GET / HTTP/1.1" 200 29300
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.aljazeera.com:443
+DEBUG:urllib3.connectionpool:https://www.aljazeera.com:443 "GET / HTTP/1.1" 200 66815
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): news.ycombinator.com:443
+DEBUG:urllib3.connectionpool:https://news.ycombinator.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:charset_normalizer:Encoding detection: utf_8 is most likely the one.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): techcrunch.com:443
+DEBUG:urllib3.connectionpool:https://techcrunch.com:443 "GET / HTTP/1.1" 200 428186
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 2
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 3
+DEBUG:root:Current feed index: 3
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 4
+DEBUG:root:Current feed index: 4
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 4
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 5
+DEBUG:root:Current feed index: 5
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 6
+DEBUG:root:Current feed index: 6
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 6
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 6
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 6
+DEBUG:root:Key pressed: 113
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 113
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbc.co.uk:443
+DEBUG:urllib3.connectionpool:https://bbc.co.uk:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.bbc.co.uk:443
+DEBUG:urllib3.connectionpool:https://www.bbc.co.uk:443 "GET / HTTP/1.1" 200 65239
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cnn.com:443
+DEBUG:urllib3.connectionpool:https://cnn.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.cnn.com:443
+DEBUG:urllib3.connectionpool:https://www.cnn.com:443 "GET / HTTP/1.1" 200 713432
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): nytimes.com:443
+DEBUG:urllib3.connectionpool:https://nytimes.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.nytimes.com:443
+DEBUG:urllib3.connectionpool:https://www.nytimes.com:443 "GET / HTTP/1.1" 200 241571
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.theguardian.com:443
+DEBUG:urllib3.connectionpool:https://www.theguardian.com:443 "GET / HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Resetting dropped connection: www.theguardian.com
+DEBUG:urllib3.connectionpool:https://www.theguardian.com:443 "GET /us HTTP/1.1" 200 114574
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): reuters.com:443
+DEBUG:urllib3.connectionpool:https://reuters.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.reuters.com:443
+DEBUG:urllib3.connectionpool:https://www.reuters.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:charset_normalizer:Encoding detection: utf_8 is most likely the one.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): washingtonpost.com:443
+DEBUG:urllib3.connectionpool:https://washingtonpost.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.washingtonpost.com:443
+DEBUG:urllib3.connectionpool:https://www.washingtonpost.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.npr.org:443
+DEBUG:urllib3.connectionpool:https://www.npr.org:443 "GET / HTTP/1.1" 200 29302
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.aljazeera.com:443
+DEBUG:urllib3.connectionpool:https://www.aljazeera.com:443 "GET / HTTP/1.1" 200 66815
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): news.ycombinator.com:443
+DEBUG:urllib3.connectionpool:https://news.ycombinator.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:charset_normalizer:Encoding detection: utf_8 is most likely the one.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): techcrunch.com:443
+DEBUG:urllib3.connectionpool:https://techcrunch.com:443 "GET / HTTP/1.1" 200 428186
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 2
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 259
+DEBUG:root:Current feed index: 1
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 259
+DEBUG:root:Current feed index: 0
+DEBUG:root:Current feed index: 0
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 0
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 0
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 1
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 2
+DEBUG:root:Current feed index: 2
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 3
+DEBUG:root:Current feed index: 3
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 4
+DEBUG:root:Current feed index: 4
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 5
+DEBUG:root:Current feed index: 5
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 5
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 5
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 6
+DEBUG:root:Current feed index: 6
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 6
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 6
+DEBUG:root:Key pressed: 258
+DEBUG:root:Current feed index: 7
+DEBUG:root:Current feed index: 7
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 7
+DEBUG:root:Key pressed: 10
+DEBUG:root:Current feed index: 7
+DEBUG:root:Key pressed: 113
+DEBUG:root:Current feed index: 1
+DEBUG:root:Key pressed: 113
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cloud.feedly.com:443
+DEBUG:urllib3.connectionpool:https://cloud.feedly.com:443 "GET /v3/search/feeds?query=bees HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): beesandballons.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://beesandballons.blogspot.com:80 "GET / HTTP/1.1" 200 25919
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): beesandballons.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://beesandballons.blogspot.com:80 "GET / HTTP/1.1" 200 25919
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): birdsbeesberriesblooms.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://birdsbeesberriesblooms.blogspot.com:80 "GET / HTTP/1.1" 200 35476
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cloud.feedly.com:443
+DEBUG:urllib3.connectionpool:https://cloud.feedly.com:443 "GET /v3/search/feeds?query=some_keyword HTTP/1.1" 200 29
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cloud.feedly.com:443
+DEBUG:urllib3.connectionpool:https://cloud.feedly.com:443 "GET /v3/search/feeds?query=bees HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): beesandballons.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://beesandballons.blogspot.com:80 "GET / HTTP/1.1" 200 25919
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): beesandballons.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://beesandballons.blogspot.com:80 "GET / HTTP/1.1" 200 25919
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): birdsbeesberriesblooms.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://birdsbeesberriesblooms.blogspot.com:80 "GET / HTTP/1.1" 200 35468
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cloud.feedly.com:443
+DEBUG:urllib3.connectionpool:https://cloud.feedly.com:443 "GET /v3/search/feeds?query=some_keyword HTTP/1.1" 200 29
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cloud.feedly.com:443
+DEBUG:urllib3.connectionpool:https://cloud.feedly.com:443 "GET /v3/search/feeds?query=bees HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): beesandballons.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://beesandballons.blogspot.com:80 "GET / HTTP/1.1" 200 25919
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): beesandballons.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://beesandballons.blogspot.com:80 "GET / HTTP/1.1" 200 25919
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): birdsbeesberriesblooms.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://birdsbeesberriesblooms.blogspot.com:80 "GET / HTTP/1.1" 200 35468
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cloud.feedly.com:443
+DEBUG:urllib3.connectionpool:https://cloud.feedly.com:443 "GET /v3/search/feeds?query=bees HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): beesandballons.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://beesandballons.blogspot.com:80 "GET / HTTP/1.1" 200 25922
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): beesandballons.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://beesandballons.blogspot.com:80 "GET / HTTP/1.1" 200 25922
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): birdsbeesberriesblooms.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://birdsbeesberriesblooms.blogspot.com:80 "GET / HTTP/1.1" 200 35468
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cloud.feedly.com:443
+DEBUG:urllib3.connectionpool:https://cloud.feedly.com:443 "GET /v3/search/feeds?query=bees HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): beesandballons.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://beesandballons.blogspot.com:80 "GET / HTTP/1.1" 200 25919
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): beesandballons.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://beesandballons.blogspot.com:80 "GET / HTTP/1.1" 200 25919
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): birdsbeesberriesblooms.blogspot.com:80
+DEBUG:urllib3.connectionpool:http://birdsbeesberriesblooms.blogspot.com:80 "GET / HTTP/1.1" 200 35453
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbc.co.uk:443
+DEBUG:urllib3.connectionpool:https://bbc.co.uk:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.bbc.co.uk:443
+DEBUG:urllib3.connectionpool:https://www.bbc.co.uk:443 "GET / HTTP/1.1" 200 60480
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cnn.com:443
+DEBUG:urllib3.connectionpool:https://cnn.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.cnn.com:443
+DEBUG:urllib3.connectionpool:https://www.cnn.com:443 "GET / HTTP/1.1" 200 712556
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): nytimes.com:443
+DEBUG:urllib3.connectionpool:https://nytimes.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.nytimes.com:443
+DEBUG:urllib3.connectionpool:https://www.nytimes.com:443 "GET / HTTP/1.1" 200 155259
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.theguardian.com:443
+DEBUG:urllib3.connectionpool:https://www.theguardian.com:443 "GET / HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Resetting dropped connection: www.theguardian.com
+DEBUG:urllib3.connectionpool:https://www.theguardian.com:443 "GET /us HTTP/1.1" 200 115596
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): reuters.com:443
+DEBUG:urllib3.connectionpool:https://reuters.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.reuters.com:443
+DEBUG:urllib3.connectionpool:https://www.reuters.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:charset_normalizer:Encoding detection: utf_8 is most likely the one.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): washingtonpost.com:443
+DEBUG:urllib3.connectionpool:https://washingtonpost.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.washingtonpost.com:443
+DEBUG:urllib3.connectionpool:https://www.washingtonpost.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.npr.org:443
+DEBUG:urllib3.connectionpool:https://www.npr.org:443 "GET / HTTP/1.1" 200 29890
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.aljazeera.com:443
+DEBUG:urllib3.connectionpool:https://www.aljazeera.com:443 "GET / HTTP/1.1" 200 61095
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): news.ycombinator.com:443
+DEBUG:urllib3.connectionpool:https://news.ycombinator.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:charset_normalizer:Encoding detection: utf_8 is most likely the one.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): techcrunch.com:443
+DEBUG:urllib3.connectionpool:https://techcrunch.com:443 "GET / HTTP/1.1" 200 400852
+DEBUG:root:Current feed index: 1

@@ -4,8 +4,18 @@
 # summaries and provide an overview of what all my rss feeds are saying
 
 import curses
-from src.modules.rss import FeedParser
-from src.modules.ui import PaneManager, InputHandler, FeedView, DebugView, StateManager
+
+from requests import post
+from src.modules.rss import Feed, FeedParser
+from src.modules.ui import (
+    FeedManager,
+    PaneManager,
+    InputHandler,
+    FeedView,
+    PostView,
+    PostManager,
+    StateManager,
+)
 
 import argparse
 from argparse import Namespace
@@ -18,6 +28,7 @@ def parse_args() -> Namespace:
 
 
 def main(stdscr):
+    stdscr.keypad(True)
     args = parse_args()
     feed_objects = []
 
@@ -32,20 +43,47 @@ def main(stdscr):
     top_pane, middle_pane, bottom_pane = PaneManager.create_panes(stdscr)
 
     input_handler = InputHandler(stdscr)
-
     state_manager = StateManager()
 
+    post_manager = None  # Will be initialized when a feed is selected
+    feed_manager = FeedManager(feed_objects)
+
     while True:
-        if state_manager.get_state() == "feeds":
-            FeedView.display_feeds(feed_objects, stdscr, top_pane, middle_pane, bottom_pane)
-        # elif state_manager.get_state() == "posts":
-        # Logic for displaying posts (to be implemented later)
+        current_state = state_manager.get_state()
+
+        if current_state == "feeds":
+            FeedView.display_feeds(
+                feed_objects, stdscr, top_pane, middle_pane, bottom_pane
+            )
+
+            selected_feed_posts = feed_manager.get_selected_feed_posts()
+            post_manager = PostManager(selected_feed_posts)
+        elif current_state == "posts":
+            if post_manager:
+                PostView.display_posts(
+                    top_pane, post_manager.posts, post_manager.selected_post_index
+                )
+                PostView.display_post_content(
+                    middle_pane, post_manager.get_current_post()
+                )
 
         key = input_handler.get_input()
 
         # Handle global key commands (like quitting the app)
         if input_handler.is_quit(key):
             break
+
+        # Handle navigation in posts view
+        if current_state == "feeds" and key == curses.KEY_ENTER:
+            selected_feed_posts = feed_manager.get_selected_feed_posts()
+            post_manager = PostManager(selected_feed_posts)
+            state_manager.set_state("posts")
+        if current_state == "posts":
+            if post_manager:
+                if input_handler.is_up(key):
+                    post_manager.get_previous_post()
+                elif input_handler.is_down(key):
+                    post_manager.get_next_post()
 
     # End the display
     PaneManager.end_display(stdscr)

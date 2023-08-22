@@ -11,6 +11,9 @@ class Post:
         self.link = link
         self.description = description
 
+    def __repr__(self) -> str:
+        return f"{self.title}, {self.link}, {self.description}"
+
     def __str__(self) -> str:
         return f"{self.title}, {self.link}, {self.description}"
 
