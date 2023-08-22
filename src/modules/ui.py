@@ -61,7 +61,7 @@ class InputHandler:
 class FeedManager:
     def __init__(self, feeds: list[Feed]) -> None:
         self.feeds = feeds
-        self.selected_feed_index = 1
+        self.selected_feed_index = 0
 
     def get_current_feed(self) -> Feed:
         logging.debug(f"Current feed index: {self.selected_feed_index}")
